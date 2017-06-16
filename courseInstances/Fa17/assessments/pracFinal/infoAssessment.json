@@ -1,0 +1,23 @@
+{
+    "uuid": "7b259688-a640-4e3a-969a-aef6b1051ff9",
+    "type": "Exam",
+    "title": "Template Practice Exam",
+    "set": "Practice Exam",
+    "number": "1",
+    "multipleInstance": true,
+    "allowAccess": [
+        {
+            "mode": "Public",
+            "credit": 100,
+            "timeLimitMin": 1
+        }
+    ],
+    "zones": [
+        {
+            "questions": [
+                {"id": "particleMotion", "points": [10, 5, 2]},
+                {"id": "addVectors",     "points": [10, 5, 2]}
+            ]
+        }
+    ]
+}
