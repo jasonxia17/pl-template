@@ -1,0 +1,30 @@
+{
+    "uuid": "8973a967-0e9c-4d94-9a63-0a7fe2e68d77",
+    "type": "Exam",
+    "title": "Template Exam",
+    "set": "Exam",
+    "number": "1",
+    "allowAccess": [
+        {
+            "mode": "Public",
+            "role": "TA",
+            "credit": 100
+        },
+        {
+            "mode": "Exam",
+            "credit": 100,
+            "startDate": "1900-07-07T23:59:59",
+            "endDate": "2300-07-10T23:59:59"
+        }
+    ],
+    "zones": [
+        {
+            "title": "Hard questions",
+            "questions": [
+                {"id": "addVectors",       "points": [10, 3]},
+                {"id": "fossilFuelsRadio", "points": [10, 5, 1]}
+            ]
+        }
+    ],
+    "text": "For this exam you can use the <a target=\"_blank\" href=\"<%= clientFilesAssessment %>/formulas.pdf\">PDF formula sheet</a> or the <a target=\"_blank\" href=\"<%= clientFilesAssessment %>/formulas.html\">HTML formula sheet</a>."
+}
