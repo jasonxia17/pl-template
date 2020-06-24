@@ -16,7 +16,7 @@
         {
             "questions": [
                 {
-                    "id": "demoCalculation",
+                    "id": "sampleMultipleChoice",
                     "points": 1,
                     "maxPoints": 5
                 }
