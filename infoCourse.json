@@ -4,6 +4,9 @@
     "title": "Template Course",
     "assessmentSets": [
     ],
+    "options": {
+        "useNewQuestionRenderer": true
+    },
     "topics": [
         {"name": "Template", "color": "orange1", "description": "Templates to copy as the start for a new question."}
     ],
