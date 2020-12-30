@@ -1,0 +1,8 @@
+{
+    "controller": "hidden-hints.py",
+    "dependencies": {
+        "elementStyles": [
+            "hidden-hints.css"
+        ]
+    }
+}
