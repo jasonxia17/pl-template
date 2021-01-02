@@ -1,0 +1,32 @@
+<pl-question-panel>
+    <p>
+        Construct a fooling set to prove that the following language is not regular:
+    </p>
+
+    {{params.language_description}}
+
+    <hidden-hints></hidden-hints>
+
+    <p>
+        Given a positive integer $i$, <code>getFoolingSetElement(i)</code> should return the $i^\text{th}$ element of your fooling set.
+    </p>
+
+    <p>
+        To prove that your construction is correct, you must show that there exists a distinguishing suffix for all pairs of distinct elements in your fooling set. Given two positive integers $i$ and $j$, subject to $i &lt j$, let $x$ be the $i^\text{th}$ element of your fooling set, and let $y$ be the $j^\text{th}$ element of your fooling set. Then, <code>getDistinguishingSuffix(i, j)</code> should return a string $z$ such that either
+        <ul>
+            <li>$xz \in L$ and $yz \notin L$, or</li>
+            <li>$xz \notin L$ and $yz \in L$.</li>
+        </ul>
+    </p>
+
+    <pl-file-editor
+        file-name="user_code.py"
+        ace-mode="ace/mode/python"
+        source-file-name="{{options.client_files_course_path}}/fooling_sets/initial_code.py">
+    </pl-file-editor>
+</pl-question-panel>
+
+<pl-submission-panel>
+    <pl-external-grader-results></pl-external-grader-results>
+    <pl-file-preview></pl-file-preview>
+</pl-submission-panel>
