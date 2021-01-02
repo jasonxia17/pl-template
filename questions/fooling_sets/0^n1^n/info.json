@@ -11,7 +11,7 @@
         "enabled": true,
         "image": "prairielearn/grader-python",
         "serverFilesCourse": ["/"],
-        "entrypoint": "/python_autograder/run.sh",
+        "entrypoint": "/grade/serverFilesCourse/fooling_sets/run.sh",
         "timeout": 5
     }
 }
