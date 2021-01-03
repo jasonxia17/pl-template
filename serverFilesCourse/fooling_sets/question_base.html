@@ -8,7 +8,7 @@ Construct a fooling set to prove that the following language is not regular:
 
 #### Instructions
 
-Given a positive integer $i$, `getFoolingSetElement(i)` should return the $i^\text{th}$ element of your fooling set.
+Given a positive integer $i$, `getFoolingSetElement(i)` should return the $i^\text{th}$ element of your fooling set. (Note that sets are not ordered, but in order for the autograder to work, you should assign an order to the elements in your fooling set.)
 
 To prove that your construction is correct, you must show that there exists a distinguishing suffix for all pairs of distinct elements in your fooling set. Given two positive integers $i$ and $j$, subject to $i < j$, let $x$ be the $i^\text{th}$ element of your fooling set, and let $y$ be the $j^\text{th}$ element of your fooling set. Then, `getDistinguishingSuffix(i, j)` should return a string $z$ such that either
 * $xz \in L$ and $yz \notin L$, or
