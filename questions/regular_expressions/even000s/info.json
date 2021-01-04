@@ -1,0 +1,17 @@
+{
+    "uuid": "b6951d16-d5bd-42e6-b182-7aa7efa290dc",
+    "title": "Regular Expressions: Even number of 000s",
+    "topic": "Regular Expressions",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/regular_expressions/run.sh",
+        "timeout": 30
+    }
+}
