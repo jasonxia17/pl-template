@@ -1,0 +1,17 @@
+{
+    "uuid": "fde5b77d-96be-4160-b42a-c8792718e818",
+    "title": "Regular Expressions: Doesn't contain 000",
+    "topic": "Regular Expressions",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/regular_expressions/run.sh",
+        "timeout": 30
+    }
+}
