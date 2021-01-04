@@ -1,0 +1,33 @@
+<pl-question-panel>
+<markdown>
+Provide a regular expression for the following language:
+
+*{{{params.language_description}}}*
+
+<hidden-hints></hidden-hints>
+
+#### Instructions
+
+Your code should define the string `reg_exp`; this string should only contain the characters `(`, `)`, `+`, `*`, `e` (to represent epsilon), and symbols in the alphabet $\Sigma$.
+
+When making more complicated regular expressions, you may want to store smaller regular expressions into intermediate variables, and use those variables to build the final expression. Here is an example of how to do that:
+
+```python
+r1 = "(0+1)"
+reg_exp = f"{r1}*"
+```
+
+Make sure to wrap intermediate expressions with parentheses, or else the order of operations in the final expression may be wrong. For example, without parentheses, the code above would evaluate to `0+1*`, instead of the intended result of `(0+1)*`.
+</markdown>
+
+<pl-file-editor
+    file-name="user_code.py"
+    ace-mode="ace/mode/python">
+reg_exp = ""
+</pl-file-editor>
+</pl-question-panel>
+
+<pl-submission-panel>
+    <pl-external-grader-results></pl-external-grader-results>
+    <pl-file-preview></pl-file-preview>
+</pl-submission-panel>
