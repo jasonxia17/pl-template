@@ -1,0 +1,17 @@
+{
+    "uuid": "bd7163a6-7423-4976-9bb7-966425ec14a8",
+    "title": "Context Free Grammars: Everything except {0^2n 1^n}",
+    "topic": "Context Free Grammars",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/CFGs/run.sh",
+        "timeout": 30
+    }
+}
