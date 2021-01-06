@@ -13,6 +13,9 @@ Given a positive integer $i$, `getFoolingSetElement(i)` should return the $i^\te
 To prove that your construction is correct, you must show that there exists a distinguishing suffix for all pairs of distinct elements in your fooling set. Given two positive integers $i$ and $j$, subject to $i < j$, let $x$ be the $i^\text{th}$ element of your fooling set, and let $y$ be the $j^\text{th}$ element of your fooling set. Then, `getDistinguishingSuffix(i, j)` should return a string $z$ such that either
 * $xz \in L$ and $yz \notin L$, or
 * $xz \notin L$ and $yz \in L$.
+
+##### Helpful Tips
+In Python, string exponentiation can be achieved with the `*` operator, and string concatenation can be achieved with the `+` operation. For example, $0^n1^n$ could be concisely expressed as `'0' * n + '1' * n`; there's no need to use a for loop to construct this string. 
 </markdown>
 
 <pl-file-editor
