@@ -1,0 +1,17 @@
+{
+    "uuid": "9c18b0ea-1cfb-4894-886f-cfc3d21c3063",
+    "title": "Context Free Grammars: {0^2n 1^n}",
+    "topic": "Context Free Grammars",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/CFGs/run.sh",
+        "timeout": 30
+    }
+}
