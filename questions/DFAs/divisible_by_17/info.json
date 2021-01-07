@@ -1,0 +1,17 @@
+{
+    "uuid": "3dfcb565-b448-41cd-ada7-70d851de08b7",
+    "title": "DFA Construction: Divisible by 17",
+    "topic": "DFA Construction",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/FAs/run.sh",
+        "timeout": 30
+    }
+}
