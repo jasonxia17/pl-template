@@ -1,0 +1,30 @@
+<pl-question-panel>
+<markdown>
+In this problem, you'll be implementing a single step of the median of medians selection algorithm. Instead of making recursive calls to your own function, you'll directly call numpy's [median](https://numpy.org/doc/stable/reference/generated/numpy.median.html) function.
+
+If you need a refresher on the algorithm, see Section 1.8 of the [textbook](http://jeffe.cs.illinois.edu/teaching/algorithms/book/01-recursion.pdf#page=15).
+
+<p>The setup code gives the following variables:</p>
+<p><pl-external-grader-variables params-name="names_for_user"></pl-external-grader-variables></p>
+
+<p>Your code snippet should define the following variables:</p>
+<pl-external-grader-variables params-name="names_from_user"></pl-external-grader-variables>
+
+If $N$ is not divisible by 5, you should [pad](https://numpy.org/doc/stable/reference/generated/numpy.pad.html) the end of `arr` with `np.inf` until it is a multiple of 5. Next, [reshape](https://numpy.org/doc/stable/reference/generated/numpy.reshape.html) the array into groups of 5. Then, find the median of each group of 5 (the `axis` keyword argument might be useful here), and find the median of those medians.
+
+Use that median as a pivot to divide `arr` into two sides. The order of elements in each side should be preserved; in other words, each side should be a subsequence of the original array. You may want to initialize `left_side` as a Python list, append to the list, and then convert it to a numpy array using `left_side = np.array(left_side)`. (The same advice applies to `right_side`.)
+
+Finally, determine which side to recurse into and what value of $k$ to use in the recursive call.
+</markdown>
+
+<pl-file-editor
+    file-name="user_code.py"
+    ace-mode="ace/mode/python">
+import numpy as np
+</pl-file-editor>
+</pl-question-panel>
+
+<pl-submission-panel>
+    <pl-external-grader-results></pl-external-grader-results>
+    <pl-file-preview></pl-file-preview>
+</pl-submission-panel>
