@@ -8,11 +8,13 @@ Construct a DFA that accepts the following language:
 
 #### Instructions
 
-Your code should define the finite automata `fa`. Note that you can use any type that you want for the states, as long as it's hashable. For example, you can have the states be integers, strings, ordered pairs, etc. You can even mix different types within the same DFA/NFA, for example: `states = {5, (3, "even"), "FAIL"}` is perfectly fine.
+Your code should define the finite automata `fa`. Note that you can use any type that you want for the states, as long as it's hashable. For example, you can have the states be integers, strings, tuples, etc. You can even mix different types within the same DFA/NFA, for example: `states = {5, (3, "even"), "FAIL"}` is perfectly fine.
 
 Many sets which can be described concisely with mathematical notation can also be written concisely in Python. For example, $\{(i, j) \mid 0 \le i,j < 9\} \cup \{FAIL\}$ can be written as:
 ```python
 {(i, j) for i in range(9) for j in range(9)}.union({"FAIL"})
+
+# Note that range(N) generates the integers from 0 to N - 1, inclusive
 ```
 
 In some cases, you may also wish to define the transition function mathematically instead of writing out all the transitions manually. Here's a simple way to do that:
@@ -36,11 +38,13 @@ from automata.fa.dfa import DFA
 # The starter code creates a DFA which accepts 0*1*
 states = {'notSeen1', 'seen1', 'fail'}
 input_symbols = {'0', '1'}
+
 transitions = {
     'notSeen1': {'0': 'notSeen1', '1': 'seen1'},
     'seen1': {'0': 'fail', '1': 'seen1'},
     'fail': {'0': 'fail', '1': 'fail'}
 }
+
 initial_state = 'notSeen1'
 accepting_states = {'notSeen1', 'seen1'}
 
