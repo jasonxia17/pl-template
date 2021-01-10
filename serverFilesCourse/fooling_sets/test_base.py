@@ -30,10 +30,10 @@ class Test(PLTestCase):
                 if not (isInLanguage(x + z) ^ isInLanguage(y + z)):
                     Feedback.add_feedback(
                         f"When i = {i} and j = {j}, the suffix\n\n"
-                        f"z = {z}\n\n"
+                        f"z = '{z}'\n\n"
                         f"fails to distinguish the two fooling set elements\n\n"
-                        f"x = {x}\n"
-                        f"y = {y}"
+                        f"x = '{x}'\n"
+                        f"y = '{y}'"
                     )
                     Feedback.set_score(0)
                     return
