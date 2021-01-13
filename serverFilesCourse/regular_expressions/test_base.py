@@ -13,14 +13,14 @@ class Test(PLTestCase):
     @points(1)
     @name("Check that regular expression is correct")
     def test_0(self):
-        allowed_chars = {'(', ')', '+', '*', 'e'}.union(alphabet)
+        allowed_chars = {'(', ')', '+', '*', 'e', ' '}.union(alphabet)
         for char in self.st.reg_exp:
             if char not in allowed_chars:
                 Feedback.add_feedback(f"Your regular expression contains the character '{char}', "
                                       "which is not permitted.")
                 return
         
-        processed_re = self.st.reg_exp.replace('e', '').replace('+', '|')
+        processed_re = self.st.reg_exp.replace('e', '').replace('+', '|'). replace(' ', '')
         try:
             compiled_re = re.compile(processed_re)
         except re.error:
