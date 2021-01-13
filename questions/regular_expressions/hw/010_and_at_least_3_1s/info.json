@@ -1,0 +1,17 @@
+{
+    "uuid": "a4406edb-c997-4275-977b-97144a84ca1e",
+    "title": "Regular Expressions: Contains 010 and at least 3 ones",
+    "topic": "Regular Expressions",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/regular_expressions/run.sh",
+        "timeout": 60
+    }
+}

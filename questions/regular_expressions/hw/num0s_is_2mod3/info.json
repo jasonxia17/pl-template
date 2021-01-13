@@ -1,0 +1,17 @@
+{
+    "uuid": "61dffd69-a3af-4a00-bfe4-b668c7514b30",
+    "title": "Regular Expressions: Number of 0s is 2 mod 3",
+    "topic": "Regular Expressions",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/regular_expressions/run.sh",
+        "timeout": 30
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "uuid": "b4658c74-7f84-4c0d-b8ef-eaaedd959ab4",
+    "title": "Regular Expressions: Contains 010 and #0s divisible by 3",
+    "topic": "Regular Expressions",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/regular_expressions/run.sh",
+        "timeout": 30
+    }
+}
