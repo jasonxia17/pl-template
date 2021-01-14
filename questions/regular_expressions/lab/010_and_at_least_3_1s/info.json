@@ -1,0 +1,17 @@
+{
+    "uuid": "392170d4-bd1d-4f2b-bdef-fd5b09eecfb3",
+    "title": "Regular Expressions: At least two 0s and one 1",
+    "topic": "Regular Expressions",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/regular_expressions/run.sh",
+        "timeout": 60
+    }
+}

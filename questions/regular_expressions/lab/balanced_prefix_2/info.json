@@ -1,0 +1,17 @@
+{
+    "uuid": "46bc93c5-b11f-4476-b93c-172c677bc478",
+    "title": "Regular Expressions: |#0 - #1| <= 2",
+    "topic": "Regular Expressions",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/regular_expressions/run.sh",
+        "timeout": 30
+    }
+}
