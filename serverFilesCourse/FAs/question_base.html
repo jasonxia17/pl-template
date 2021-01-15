@@ -6,34 +6,13 @@ Construct a DFA that accepts the following language:
 
 #### Instructions
 
-Your code should define the finite automata `fa`. Note that you can use any type that you want for the states, as long as it's hashable. For example, you can have the states be integers, strings, tuples, etc. You can even mix different types within the same DFA/NFA, for example: `states = {5, (3, "even"), "FAIL"}` is perfectly fine.
+Your code should define the finite automata `fa` by providing the states, input symbols, transitions, initial state, and accepting states. Note that you can use any type that you want for the states, as long as it's hashable. For example, you can have the states be integers, strings, tuples, etc. You can even mix different types within the same DFA/NFA, for example: `states = {5, (3, "even"), "FAIL"}` is perfectly fine.
 
-Many sets which can be described concisely with mathematical notation can also be written concisely in Python. For example, $\{(i, j) \mid 0 \le i,j < 9\} \cup \{FAIL\}$ can be written as:
+Here is an example of how you would define a DFA that accepts all strings in $0^*1^*$:
+
 ```python
-{(i, j) for i in range(9) for j in range(9)}.union({"FAIL"})
-
-# Note that range(N) generates the integers from 0 to N - 1, inclusive
-```
-
-In some cases, you may also wish to define the transition function mathematically instead of writing out all the transitions manually. Here's a simple way to do that:
-```python
-def delta(q, a):
-    # do some work here
-    return next_state
-
-transitions = {q: {a: delta(q, a) for a in input_symbols} for q in states}
-```
-
-Also, note that `{}` creates an empty dictionary, not a set. In order to create an empty set, use `set()`.
-
-</markdown>
-
-<pl-file-editor
-    file-name="user_code.py"
-    ace-mode="ace/mode/python">
 from automata.fa.dfa import DFA
 
-# The starter code creates a DFA which accepts 0*1*
 states = {'notSeen1', 'seen1', 'fail'}
 input_symbols = {'0', '1'}
 
@@ -48,6 +27,49 @@ accepting_states = {'notSeen1', 'seen1'}
 
 fa = DFA(states=states, input_symbols=input_symbols, transitions=transitions,
          initial_state=initial_state, final_states=accepting_states)
+```
+
+In some cases, you may wish to define the DFA mathematically instead of writing out all of the states and transitions manually. For example, here is a DFA which accepts all strings that have at least 5 ones *or* have a total length congruent to 2 mod 3:
+
+```python
+from automata.fa.dfa import DFA
+
+states = {(i, j) for i in range(6) for j in range(3)}
+# Equivalent to {(i, j) | 0 <= i < 6, 0 <= j < 3}, or {0, 1, 2, 3, 4, 5} x {0, 1, 2}
+
+# i tracks the number of ones seen so far but stops incrementing once we reach 5,
+# because we don't care about any additional ones. j tracks the current length mod 3.
+
+input_symbols = {'0', '1'}
+
+def delta(q, a):
+    (i, j) = q
+    if a == '0':
+        return (i, (j + 1) % 3)
+    else:
+        return (min(i + 1, 5), (j + 1) % 3)
+
+# This precomputes the output of the delta function on
+# all pairs of inputs so that future lookups will be O(1)
+transitions = {q: {a: delta(q, a) for a in input_symbols} for q in states}
+
+initial_state = (0, 0)
+accepting_states = {(i, j) for (i, j) in states if i == 5 or j == 2}
+# Equivalent to {(i, j) ∈ Q | i = 5 or j = 2}
+
+fa = DFA(states=states, input_symbols=input_symbols, transitions=transitions,
+         initial_state=initial_state, final_states=accepting_states)
+```
+
+{{#params.is_nfa}}
+Also, note that `{}` creates an empty dictionary, not a set. In order to create an empty set, use `set()`.
+{{/params.is_nfa}}
+
+</markdown>
+
+<pl-file-editor
+    file-name="user_code.py"
+    ace-mode="ace/mode/python">
 </pl-file-editor>
 
 <hidden-hints></hidden-hints>
