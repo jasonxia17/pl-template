@@ -4,8 +4,6 @@ Construct a DFA that accepts the following language:
 
 *{{{params.language_description}}}*
 
-<hidden-hints></hidden-hints>
-
 #### Instructions
 
 Your code should define the finite automata `fa`. Note that you can use any type that you want for the states, as long as it's hashable. For example, you can have the states be integers, strings, tuples, etc. You can even mix different types within the same DFA/NFA, for example: `states = {5, (3, "even"), "FAIL"}` is perfectly fine.
@@ -51,6 +49,9 @@ accepting_states = {'notSeen1', 'seen1'}
 fa = DFA(states=states, input_symbols=input_symbols, transitions=transitions,
          initial_state=initial_state, final_states=accepting_states)
 </pl-file-editor>
+
+<hidden-hints></hidden-hints>
+
 </pl-question-panel>
 
 <pl-submission-panel>
