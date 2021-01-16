@@ -65,6 +65,22 @@ fa = DFA(states=states, input_symbols=input_symbols, transitions=transitions,
 Also, note that `{}` creates an empty dictionary, not a set. In order to create an empty set, use `set()`.
 {{/params.is_nfa}}
 
+##### Debugging Tips
+
+If you get an error that looks like the one below, that probably means your `delta` function returned a state which isn't in the set of states you specified for your DFA.
+```
+automata.base.exceptions.InvalidStateError: end state __ for transition on __ is not valid
+```
+
+Also, you might find it useful to simulate your DFA on a specific input and see what state it is in after reading each symbol, which you can do using the code provided below:
+```python
+try:         
+    for q in fa.read_input_stepwise(some_arbitrary_string):
+        print(q)
+except:
+    pass
+```
+
 </markdown>
 
 <pl-file-editor
