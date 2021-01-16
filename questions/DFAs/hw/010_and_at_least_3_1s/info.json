@@ -1,0 +1,17 @@
+{
+    "uuid": "30da2a5d-a6b8-4d21-80b0-cfe4e0ed4e78",
+    "title": "DFA Construction: Contains 010 and at least 3 ones",
+    "topic": "DFA Construction",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/FAs/run.sh",
+        "timeout": 60
+    }
+}

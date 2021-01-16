@@ -1,0 +1,17 @@
+{
+    "uuid": "007705c0-3168-4e1e-bf03-56b07cb09ba0",
+    "title": "DFA Construction: Number of 0s is 2 mod 3",
+    "topic": "DFA Construction",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/FAs/run.sh",
+        "timeout": 30
+    }
+}

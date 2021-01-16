@@ -1,0 +1,17 @@
+{
+    "uuid": "ff7f5cc2-49e3-4875-a168-c71b96858e6a",
+    "title": "DFA Construction: At least two 0s and one 1",
+    "topic": "DFA Construction",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/FAs/run.sh",
+        "timeout": 60
+    }
+}

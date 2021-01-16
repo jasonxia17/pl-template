@@ -1,0 +1,17 @@
+{
+    "uuid": "09d8ea99-c099-457a-b052-e03a5e4d846b",
+    "title": "DFA Construction: |#0 - #1| <= 1",
+    "topic": "DFA Construction",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/FAs/run.sh",
+        "timeout": 30
+    }
+}

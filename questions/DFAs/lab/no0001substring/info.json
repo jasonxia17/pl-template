@@ -1,0 +1,17 @@
+{
+    "uuid": "9757f329-1ce1-4497-b03b-825e1b9b8cf6",
+    "title": "DFA Construction: Doesn't contain 0001",
+    "topic": "DFA Construction",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "partialCredit": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "serverFilesCourse": ["/"],
+        "entrypoint": "/grade/serverFilesCourse/FAs/run.sh",
+        "timeout": 30
+    }
+}
